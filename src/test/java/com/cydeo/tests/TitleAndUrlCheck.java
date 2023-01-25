@@ -36,11 +36,46 @@ public class TitleAndUrlCheck {
 
         String actualUrl = driver.getCurrentUrl();
 
-        if(actualUrl.contains(expectedText)){
-            System.out.println("PASSED");
-        }else {
-            System.out.println("FAILED");
+        if(!actualUrl.contains(expectedText)){
+            System.err.println("FAILED on URL verification of Facebook");
+            System.exit(-1);
         }
+
+
+
+        // Verify title contains Facebook
+        if(!driver.getTitle().contains("Facebook")){
+            System.err.println("FAILED on Title verification of Facebook");
+            System.exit(-1);
+        }
+
+        // Navigate to https://www.google.com
+        driver.navigate().to("https://www.google.com");
+
+        // Verify url contains google
+        if(!driver.getCurrentUrl().contains("google")){
+            System.err.println("FAILED on URL verification of Google");
+            System.exit(-1);
+        }
+
+        if(!driver.getTitle().contains("Google")){
+            System.err.println("FAILED on Title verification of Google");
+            System.exit(-1);
+        }
+
+        driver.navigate().back(); // back to Facebook
+        // Verify title contains Facebook
+        if(!driver.getTitle().contains("Facebook")){
+            System.err.println("FAILED on Title verification of Facebook");
+            System.exit(-1);
+        }
+
+        driver.navigate().forward(); // go to google again
+        if(!driver.getCurrentUrl().contains("google")){
+            System.err.println("FAILED on URL verification of Google");
+            System.exit(-1);
+        }
+
 
         driver.close();
     }
