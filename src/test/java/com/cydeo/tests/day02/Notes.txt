@@ -1,0 +1,36 @@
+As a tester your main job will be verifying that feature is working as expected
+    * actual result (comes from UI/backend app) VS expected (documentation/user story/dev team) result
+
+    ***** use sometimes if you are stuck with which answer is right or wrong
+      USE DEPENDS
+
+WebElements: everything on a webpage,
+            1st step Locate the element: findElement() method -- locator string as a parameter
+            2nd step : we apply action-- click(), sendKeys(), getText(), get ...many different things
+
+  8 locators in Selenium-- 6 of them already defiened in the HTML part: id,name,className, tagname, linkText/paritalLinkText
+  2 other: Custom locators
+  xpath: 2 category- absolute xpath (top to bottom every tags up to that element)
+                   - relative xpath : has special syntax
+                        //tagName[@attribute='value']
+                        //tagName[.='text'] : with text
+                        //tagName[contains(@attribute,'value')] : attribute + partialText
+
+  CSS: has cleaner syntax, some automation tools(cypress) only using CSS
+        tagName[attribute='value']
+        if there is ID or class: short expressions
+        tagName#id
+        tagName.className
+
+  TestNG provides annotations to run your project in a certain way you want
+  @Test :
+  @BeforeMethod or @AfterMethod : runs before/after each @Test
+  @BeforeClass or @AfterClass
+
+  Assertions come with TestNG
+  Assert.assertTrue(condition,message)
+  Assert.assertEqual(actual,expected,message)
+
+  Utility Classes and Methods:
+  * We have general utility class and methods such as WebDriverFactory
+  * We have also project level and oriented utilities
