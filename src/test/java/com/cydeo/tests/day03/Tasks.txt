@@ -1,0 +1,29 @@
+TC 1- As a user I should be able to see the labels [“Home”,”About us”,”Our Approach”,”Products and Services”,”Contact”,”LOGIN”]
+1- Open a chrome browser
+2- Go to “https://vytrack.com/”
+3- Verify that [“Home”,”About us”,”Our Approach”,”Products and Services”,”Contact”,” LOGIN”] is displayed
+
+TC 2- As a user I should be able to see the labels [“Our Mission and Vision”,”Car Fleet Management”,”Newest Technologies”,””] under Our Approach
+1- Open a chrome browser
+2- Go to “https://vytrack.com/”
+3- Verify that [“Our Mission and Vision”,”Car Fleet Management”] is displayed
+
+TC 3 - As a user I should be able to see Fleet Analysis and Optimization Page
+1- Open a chrome browser
+2- Go to “https://vytrack.com/”
+3- Click Products and Services
+4- Click Fleet analysis and optimization
+5- Verify the page and label
+
+TC 4- As a user I should be able to see the password hidden
+1- Open a chrome browser
+2- Go to "http://qa2.trycloud.net/index.php/login"
+3- Verify that password s hidden
+4- Login with valid credentials
+
+
+TC 5- As a user I should be able to see the menus (Dashboard, Files, Photos, Activity, Talk, Contacts, Circle, Calendar, Deck)
+1- Open a chrome browser
+2- Go to "http://qa2.trycloud.net/index.php/login"
+3- Login with valid credentials
+4- Verify that (Dashboard, Files, Photos, Activity, Talk, Contacts, Circle, Calendar, Deck) is displayed

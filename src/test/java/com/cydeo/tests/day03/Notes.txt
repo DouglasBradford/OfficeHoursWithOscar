@@ -1,0 +1,54 @@
+What is Synchronization and how you handle?
+Front-End Testing: Selenium, Cypress or Playwright etc. tools
+Thread.sleep ---> JAVA, static and not recommended
+we want our automation to be as fast as possible
+    - implicitly wait
+        works together with findElement method
+        No Such Element exception
+    - explicitly wait
+        works with different conditions
+        if the condition is NOT met: throws timeout exception
+
+        TC 1- As a user I should be able to see the labels [“Home”,”About us”,”Our Approach”,”Products and Services”,”Contact”,”LOGIN”]
+        1- Open a chrome browser
+        2- Go to “https://vytrack.com/”
+        3- Verify that [“Home”,”About us”,”Our Approach”,”Products and Services”,”Contact”,” LOGIN”] is displayed
+
+        TC 2- As a user I should be able to see the labels [“Our Mission and Vision”,”Car Fleet Management”,”Newest Technologies”,””] under Our Approach
+        1- Open a chrome browser
+        2- Go to “https://vytrack.com/”
+        3- Verify that [“Our Mission and Vision”,”Car Fleet Management”] is displayed
+
+        TC 3 - As a user I should be able to see Fleet Analysis and Optimization Page
+        1- Open a chrome browser
+        2- Go to “https://vytrack.com/”
+        3- Click Products and Services
+        4- Click Fleet analysis and optimization
+        5- Verify the page and label
+
+        TC 4- As a user I should be able to see the password hidden
+        1- Open a chrome browser
+        2- Go to "http://qa2.trycloud.net/index.php/login"
+        3- Verify that password is hidden
+        4- Login with valid credentials
+
+
+        TC 5- As a user I should be able to see the menus (Dashboard, Files, Photos, Activity, Talk, Contacts, Circle, Calendar, Deck)
+        1- Open a chrome browser
+        2- Go to "http://qa2.trycloud.net/index.php/login"
+        3- Login with valid credentials
+        4- Verify that (Dashboard, Files, Photos, Activity, Talk, Contacts, Circle, Calendar, Deck) is displayed
+
+        at interview PIQ: how and where you used OOP concepts of JAVA
+            * Inheritance: TestBase example
+
+
+    Real life UI test scenario
+    1. You will get one Test ticket for a feature
+    2. Manually Test it to see and create test steps
+    3. If you think that these tests should be automated then you start coding
+    4. You run your tests locally (at your personal PC)
+    5. You push and create PR (pull request) and your code merges to general company framework
+    6. Your tests run daily (even sometimes every 2 hours) in a remote machine
+
+   You will NOT see actually browsers opening or closing
