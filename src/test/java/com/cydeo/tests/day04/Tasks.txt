@@ -1,0 +1,24 @@
+Pre condition
+
+Create a page CydeoPracticePage
+Create an element for Home link
+Create a method which is clickOption(String option)
+I will use this for another method
+(use hover in method)
+
+
+TC-1 Verify user1 , user2 , user3 is displaying
+
+1- Open browser
+2- Click Hovers
+3- Verify user1 , user2 , user3 is displaying
+
+
+TC-2
+
+1- Open browser
+2- Click Key Presses
+3- Click shift
+4- Verify You entered: SHIFT message
+5- Click TAB
+5- Verify You entered: TAB message

@@ -1,0 +1,43 @@
+What is Page Object Model Design Pattern?
+create a Java Class for each page of your application
+
+How do we implement POM Design?
+have a constructor
+    - initialize driver instance
+    - object of that specific class
+    - PageFactory.initElements(driver,this)
+*  after this step instead of using findElement/s methods we use @FindBy annotations
+
+What are the advantages? PIQ: What are the attributes of a good automation framework?
+    - re-usability
+    - maintainability
+    - easy to understand the framework from scratch (readable code)
+
+Singleton Driver Design Concept?
+one object means : one single opened browser which uses same driver throughout different classes
+
+       What do we need?
+       - Special Driver Utility Class
+            - encapsulated driver object (you can NOT create object directly)
+            - call getDriver method to create object
+            - we need browser type, either hard coded or called from .properties file
+
+In your test framework:
+    Maybe- you will have an abstract Parent class POM
+
+    Real Life Scenario on what to automate and what not to?
+    * Amazon, Etsy shopping application:
+        - Valentine Day special feature: 2-4 days deal, one time feature
+        to automate this you would spend at least one work day
+
+        - subscription to Amazon Prime feature: works fine everyday, every hour
+        : smoke testing and regression testing candidate
+        - write test case and use it every day
+        - special price for Ohio residents- manual ticket, test manually and than you automate
+
+What are tool tips and how to locate them?
+tooltips are elements that are providing extra information about another element when you hover over
+but they are difficult locate
+click on sources tab
+then for windows function-F8 key
+for mac cmd+F8+\
